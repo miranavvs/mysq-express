@@ -4,7 +4,8 @@ Building REST APIs with MySQL and Node.js
 Installation:
 =============
 
-1-clone prokect and install npm
+1-clone project and install npm
+
 $sudo npm install 
 
 2-config database:
