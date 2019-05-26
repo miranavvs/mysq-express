@@ -8,13 +8,16 @@ Installation:
 $sudo npm install 
 
 2-config database:
+
+3-create new  database in your local server and change the configuration 
+
 in :/config/config.js
 
 module.exports = {
      hostname:'localhost',
      username:'root',
      password:'password',
-     database:'base_11',
+     database:'data_base_name',
      user_email:'miranavvs@gmail.com',
      user_password :'toto'
 }
