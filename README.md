@@ -8,9 +8,9 @@ Installation:
 
 $sudo npm install 
 
-2-create new  database in your local server and change the configuration 
-
-in :/config/config.js
+2-create new  database in your local server and export  database.sql 
+ 
+Configuration file  here :/config/config.js
 
 module.exports = {
 
