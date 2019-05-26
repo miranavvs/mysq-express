@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+    <style type="text/css" media="screen">
+          .footer{
+                height: 100px;
+                width: 100%;
+          }
+          .contact{
+
+             padding-top: 50px;
+             margin-bottom: 20px;
+
+          }
+    </style>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+
+      <p class="text-left" >Welcome to <%= title %> documents</p>
+      <p class="text-primary"><u>1- API Routers Documents</u> </p>
+      <p> Start server by npm : </p>
+      <p>command :  $ cd api-mysql-ejs   , $ npm start   </p>
+
+
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">functions</th>
+            <th scope="col" class="text-center">url</th>
+          </tr>
+          <tr class="bg-primary"><td colspan="2" class="text-center">  GET </td> </tr>
+        </thead>
+        <tbody>
+            <% urls_get.forEach(function(url) { %>
+          <tr>
+            <td>  <%=url.name %>  </td>
+            <td><a href= "<%= url.url %>"><%= url.url %></a>  </td> 
+          </tr>
+          <% }); %>
+           </tr>
+
+          <tr class="bg-primary"><td colspan="2" class="text-center">  POST using curl on command line   </td> </tr>     
+          
+          <tr>
+            <td> add client   </td>
+            <td> curl -X POST -H 'Content-Type: application/json' -i http://localhost:3000/clients --data '{"id_client":4,"nom_client":"Eric"}',</td> 
+          </tr>
+          <tr>
+            <td> add commande  </td>
+            <td> curl -X POST -H 'Content-Type: application/json' -i http://localhost:3000/commandes --data '{"id_client":2,"id_product":12,"quantite":2,"date_commande":"2019-05-21T17:09:03.000Z"}'</td> 
+          </tr>
+  
+        <p>
+             <% contact.forEach(function(contacts){ %> 
+                   <%=contacts.name%>
+             <% }); %>
+        <p>
+
+        </tbody>
+      </table>
+
+        <div class="footer bg-light text-center">
+          <p class="contact">
+             <% contact.forEach(function(contacts){ %> 
+                   <%=contacts.name%>  - <%=contacts.date%>
+                   <%=contacts.email%> : <%=contacts.url%>
+             <% }); %>
+             <p>
+        </div>
+
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/jquery-slim.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+
+</html>
