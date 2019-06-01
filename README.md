@@ -17,9 +17,9 @@ module.exports = {
      hostname:'localhost',
      username:'root',
      password:'password',
-     database:'data_base_name',
-     user_email:'miranavvs@gmail.com',
-     user_password :'your password'
+     database:'database_name',
+     user_email:'',
+     user_password :''
 }
 
 3-start projetc :
