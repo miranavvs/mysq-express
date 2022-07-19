@@ -1,4 +1,4 @@
-# mysq-express
+# mysql-express
 Building REST APIs with MySQL and Node.js 
 
 Installation:
